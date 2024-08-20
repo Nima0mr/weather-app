@@ -1,8 +1,11 @@
+import { getWeather } from 'shared/api/weatherService';
 import {create} from 'zustand';
 
-export const useStore = create((set) => ({
+export const useStore = create((set,get) => ({
   city: "Tehran",
   weatherType: "Fog",
+  weather: '',
+  getWeather: () => get().weather,
   weatherDegree: 3,
   allWeatherTypes:[
     "Mostly Clear",

@@ -1,6 +1,6 @@
 import { memo } from "react";
-import { ReactComponent as Hamburger } from "../../icons/hamburger-menu.svg";
 import { useStore } from "../store";
+import { icons } from "../icons";
 
 const Navbar = memo(() => {
   //--------------------------------------------------------
@@ -11,7 +11,7 @@ const Navbar = memo(() => {
           <h1 className="font-segoe font-semibold text-h1 text-white">
             {useStore((state) => state.city)}
           </h1>
-          <Hamburger className="text-h2"></Hamburger>
+          <div className="text-h2">{icons.hamburger}</div>
         </header>
     </>
   );
